@@ -1,4 +1,4 @@
-#k_mer nucleotide pattern counting
+#k_mer nucleotide pattern counting 
 
 #Takes inputs of a string of nucleotides and a nucleotide pattern 
 #then counts how many nucleotide patterns occur, including any 
