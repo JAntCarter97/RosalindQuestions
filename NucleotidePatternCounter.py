@@ -20,9 +20,8 @@ def nucPatternCount(nucleotideString, pattern):
     patternList = [k for k in pattern]
     #print(nucList)
     #print(patternList)
-    #Indexes that are numbers because python is inferior to C
-    #and it throws an error when trying to use the indexes in
-    #python's for loops for anything mathwise. 
+    #Numerical indicies because python throws an error when using for loop
+    #indicies for anything mathwise. Perhaps the range func will fix this?
     j = 0
     p = 0   
     #Loops through the nucleotide list and checks for the first 
