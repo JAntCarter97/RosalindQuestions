@@ -40,7 +40,11 @@ def matrixGen(sequence1, sequence2):
     return(matrixScoring(seqMatrix))
 
 def matrixScoring(seqMatrix):
-    #Score the matrix from top left to bottom right
+    #===============================================
+    # Score the matrix from top left to bottom right.
+    # Create a traceback matrix of 1 = largest num
+    # in rows.
+    #===============================================
     dimensions = seqMatrix.shape
     row, col = dimensions
     for i in range(1, row):
@@ -58,8 +62,28 @@ def matrixScoring(seqMatrix):
             if (maxNum <= nullScore):
                 maxNum = nullScore
             seqMatrix[i][j] = maxNum
-    return(seqMatrix)
+        
+    #===============================        
+    # Traceback Sequence
+    # TODOO: find max num index pos
+    # in seqMatrix and check each 
+    # adjacent 3 cells for the largest
+    # num. If any cells are equal then
+    # sum the boxes for the largest 
+    # then continue on that cell's 
+    # box that is the largest sum 
+    # until we find a cell value of 1.0
+    # with the three adjecent cells 
+    # with values of 0.0 or we hit
+    # the zeroth row and col.
+    #===============================    
 
+    #===============================
+    #Visuals and Returns
+    #===============================
+    #print(seqMatrix)
+    print(tracebackMatrix)
+    return(seqMatrix)
 
 #mat = matrixGen(seqGen(10,0), seqGen(10,1))
 mat = matrixGen("AGGTACT", "GGATCT")
