@@ -48,8 +48,8 @@ def nucPatternCount(nucleotideString, pattern):
     return patternCount 
                 
 #Test code               
-#nucleoPattern = "acacac"
-#sampleNuc = "acacacacacac" 
+nucleoPattern = "acacac"
+sampleNuc = "acacacacacac" 
 #
-#howMany = nucPatternCount(sampleNuc, nucleoPattern)
-#print(howMany)
+howMany = nucPatternCount(sampleNuc, nucleoPattern)
+print(howMany)
